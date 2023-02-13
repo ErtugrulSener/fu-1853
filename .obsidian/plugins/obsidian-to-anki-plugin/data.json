@@ -1,0 +1,117 @@
+{
+  "settings": {
+    "CUSTOM_REGEXPS": {
+      "Einfach": "^#+\\s*(.+)\\n*((?:\\n(?:^[^\\n#]{0,2}$|^[^\\n#].{3}(?<!<!--).*))+)",
+      "Einfach (Antwort eintippen)": "",
+      "Einfach (beide Richtungen)": "",
+      "Einfach (eine oder zwei Richtungen)": "",
+      "Lückentext": "",
+      "Obsidian-basic": "",
+      "Obsidian-basic-reversed": "",
+      "Obsidian-cloze": "",
+      "Obsidian-spaced": ""
+    },
+    "FILE_LINK_FIELDS": {
+      "Einfach": "Vorderseite",
+      "Einfach (Antwort eintippen)": "Vorderseite",
+      "Einfach (beide Richtungen)": "Vorderseite",
+      "Einfach (eine oder zwei Richtungen)": "Vorderseite",
+      "Lückentext": "Text",
+      "Obsidian-basic": "Front",
+      "Obsidian-basic-reversed": "Front",
+      "Obsidian-cloze": "Text",
+      "Obsidian-spaced": "Prompt"
+    },
+    "CONTEXT_FIELDS": {},
+    "FOLDER_DECKS": {
+      "Aufgabenblätter": "",
+      "Bilder": "",
+      "Kurstext": "",
+      "Selbsttestaufgaben": "",
+      "Selbsttestaufgaben/KE03": ""
+    },
+    "FOLDER_TAGS": {
+      "Aufgabenblätter": "",
+      "Bilder": "",
+      "Kurstext": "",
+      "Selbsttestaufgaben": "",
+      "Selbsttestaufgaben/KE03": ""
+    },
+    "Syntax": {
+      "Begin Note": "START",
+      "End Note": "END",
+      "Begin Inline Note": "STARTI",
+      "End Inline Note": "ENDI",
+      "Target Deck Line": "TARGET DECK",
+      "File Tags Line": "FILE TAGS",
+      "Delete Note Line": "DELETE",
+      "Frozen Fields Line": "FROZEN"
+    },
+    "Defaults": {
+      "Tag": "Obsidian_to_Anki",
+      "Deck": "Default",
+      "Scheduling Interval": 0,
+      "Add File Link": false,
+      "Add Context": false,
+      "CurlyCloze": false,
+      "CurlyCloze - Highlights to Clozes": false,
+      "ID Comments": true,
+      "Add Obsidian Tags": false
+    }
+  },
+  "Added Media": [
+    "flussgraph.png",
+    "bestandteile-eines-programmspeichers.png",
+    "speicherbereiche.png",
+    "kontextfreie-grammatik.png"
+  ],
+  "File Hashes": {
+    "ke07.md": "9533d0cfb857b51ddf03bc06d26858e1",
+    "ke06.md": "a2e02da33871a8e6a4c4b319635c26c8",
+    "ke05.md": "a607bc808e3408c1ac1bafd0956e4393",
+    "ke04.md": "f2d129723637295577912c7582b59f23",
+    "ke03.md": "4b58356385568dbb0a403ac2b5f1b668",
+    "ke02.md": "79af5533a128076f437b3cc9e6baa84b",
+    "ke01.md": "0d5822772630b1a9e02c0e79c293026d",
+    "Gedächtnisprotokolle_Steimann.md": "13fcce47f184b91db150b627d81e4dcb",
+    "Gedächtnisprotokolle_Güting.md": "98da6f3dbd77e4bd4a0201efdaeca338"
+  },
+  "fields_dict": {
+    "Einfach": [
+      "Vorderseite",
+      "Rückseite"
+    ],
+    "Einfach (Antwort eintippen)": [
+      "Vorderseite",
+      "Rückseite"
+    ],
+    "Einfach (beide Richtungen)": [
+      "Vorderseite",
+      "Rückseite"
+    ],
+    "Einfach (eine oder zwei Richtungen)": [
+      "Vorderseite",
+      "Rückseite",
+      "Gegenrichtung hinzufügen"
+    ],
+    "Lückentext": [
+      "Text",
+      "Rückseite Extra"
+    ],
+    "Obsidian-basic": [
+      "Front",
+      "Back"
+    ],
+    "Obsidian-basic-reversed": [
+      "Front",
+      "Back"
+    ],
+    "Obsidian-cloze": [
+      "Text",
+      "Extra"
+    ],
+    "Obsidian-spaced": [
+      "Prompt"
+    ]
+  }
+}

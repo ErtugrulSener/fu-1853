@@ -1,0 +1,126 @@
+{
+  "main": {
+    "id": "7731eb135312cd1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "81b206a8c29debb7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1de3bb5cbc81514d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fu-1853-KE07.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5ad8191d8a5cf1e4",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "0a3956493e99758a",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "e1d1e4613b7fcd27",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "24d6a80bb8953ac0",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "ed9a4224df2f9dd1",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "da39940e44b0883b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "9fbfa97bd7f55b6f",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "fu-1853-KE07.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "fe8765f73bc7029f",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "fu-1853-KE07.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "1230b42650dbde25",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "fu-1853-KE07.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "1de3bb5cbc81514d",
+  "lastOpenFiles": []
+}

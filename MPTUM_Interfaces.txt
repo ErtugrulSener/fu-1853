@@ -1,0 +1,34 @@
+Kriterien:
+- anbietend / ermöglichend
+- allgemein / kontextspezifischh
+
+1)
+Idosynkratische Interfaces:
+	- Quasi das Klasseninterface (Alle public Methoden einer Klasse)
+
+Familieninterface:
+	- Gruppierung von Klassen anhand von einigen Methoden
+		-> durch semantische Funktionalität wird Zusammengehörigkeit bestimmt
+
+	- z.B:
+		- Server, wo man ein Mal mit HTTP drauf zugreifen kann und ein Mal mit FTP
+		- Clients für FTP brauchen Funktionalitäten für HTTP nicht unders herum
+
+2)
+Keine
+
+3)
+Client/Server:
+	- Server stellt Funktionalitäten bereit, die der Client braucht
+
+4)
+Server/Client:
+	- Server ruft beim Client etwas auf, wodurch der Client einen Mehrwert erhält
+
+	- z.B:
+		- Runnable & Threading
+
+Server/Item:
+	- z.B: Comparable oder Printen
+		- Der Drucker ist der Server, der Drucker hat aber vom Drucken nichts.
+		- Der Nutzer profitiert und steht in der Beziehung zum Dokument und dem Drucker

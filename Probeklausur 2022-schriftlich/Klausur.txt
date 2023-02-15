@@ -10,7 +10,9 @@ Aufgabe 6: Refactoring durchführen
 Aufgabe 7: Vererbung durch Delegation ersetzen
 -> Aufgabe 8: Metaprogrammierung
 -> Aufgabe 9: Metaprogrammierung
--> Aufgabe 10: Extreme Programming
+Aufgabe 10: Extreme Programming
+	- Nochmal durchgehen und lernen!
+
 	- 12 Kernkonzepte von EP
 	- 6 Voraussetzungen für den Einsatz von EP
 	- 4 Tools, die zum Einsatz kommen bei EP

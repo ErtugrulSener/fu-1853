@@ -1,0 +1,28 @@
+Anbei ein paar Informationen zu der aktuellen Klausur:
+Es handelt sich diesmal um keine Multiple-Choice-Klausur. Die Aufgaben sind eher an die mündliche Prüfung angelehnt.
+Behandelt werden die Themen:
+Aufgabe 1: Interfaces
+Aufgabe 2: Refactoring und Interfaces
+Aufgabe 3: Dependency Injection
+Aufgabe 4: Testen
+Aufgabe 5: Design by Contract
+Aufgabe 6: Refactoring durchführen
+Aufgabe 7: Vererbung durch Delegation ersetzen
+-> Aufgabe 8: Metaprogrammierung
+-> Aufgabe 9: Metaprogrammierung
+-> Aufgabe 10: Extreme Programming
+	- 12 Kernkonzepte von EP
+	- 6 Voraussetzungen für den Einsatz von EP
+	- 4 Tools, die zum Einsatz kommen bei EP
+	- 7 Prinzipien von EP
+	- 10 häufigsten Risiken in der Softwareentwicklung nach Böhm und Lösungen von EP
+
+Wichtig aus der Probeklausur:
+- Aufgabe 1: Interfaces
+- Aufgabe 2: Interfaces
+- Aufgabe 3: Dependency Injection
+- Aufgabe 4: Design by Contract
+- Aufgabe 5: Testen
+- Aufgabe 6: Interfaces und Testen
+- Aufgabe 9: Refactoring
+- Aufgabe 10: Extreme Programming

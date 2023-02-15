@@ -1,0 +1,73 @@
+Aufgabe 1)
+
+1. Das erste Prinzip wiederverwendbaren objektorientierten Designs
+"Program to an interface, not an implementation"
+
+- Natürlich nur, wenn eine Abkopplung auch Sinn macht. z.B: macht es keinen Sinn ein Interface "IString" einzubauen,
+um einen Datentyp "String" von den sie benutzenden Klassen abzukoppeln. Stattdessen sind Interfaces an Modulgrenzen (Schnittstellen zu größeren Programmeinheiten)
+zu nutzen.
+
+- Dieses Prinzip führt zur "interfacebasierten Programmierung"
+	- bei der Interfaces als Typen fungieren können
+	- sie helfen der Einhaltung des Geheimnisprinzips
+	- sie Sorgen für einen möglichen Austausch der Implementierung zur Laufzeit (Ohne alle Aufruferklassen anzupassen)
+
+2. Interface Segregation Principle
+"Clients should not be forced to depend upon interfaces that they do not use"
+
+- Dafür nutzt man partielle Interfaces (Differenzierung des Zugriffs auf ein Objekt für Verschiedene Aufrufer)
+- In C# gibt es die explizitie Interfaceimplementierung, die hilft dieses Prinzip einzuhalten
+
+- Man verhindert so, dass alle Benutzer einer Klasse angepasst werden müssen, wenn ihr Interface angepasst wird
+	-> Obwohl sie diese Änderung überhaupt nicht betrifft
+
+3. Dependency Inversion Principle
+- "a) High-level modules should not depend on low-level modules. Both should depend on abstractions."
+- "b) Abstractions should not depend on details. Details should depend on abstractions."
+
+zu a)
+Der Aufrufer hängt nur noch von der Abstraktion ab, die Implementation wird ihm später z.B: per Dependency Injection gegeben.
+Die Aufgerufene implementiert diese Abstraktion und ist damit auch von ihr abhängig.
+
+zu b
+
+---------------------------------------------------------------------------------------------------------
+
+Aufgabe 2)
+
+1.
+A1: Interfaces können als Typen genutzt werden.
+A2: Klassen implementieren Interfaces.
+
+2.
+a) Factories
+Familieninterfaces
+
+b) Black-Box-Frameworks
+Server/Client Interfaces, Server/Item Interfaces
+
+c) Bibliotheken
+Client/Server Interfaces
+
+d) Threads
+Server/Client Interfaces (wie z.B: Runnable)
+
+e) Event-Listener-Mechanismus
+Server/Client Interfaces (wie z.B: Observable)
+
+---------------------------------------------------------------------------------------------------------
+
+Aufgabe 3)
+b) Falls die Erzeugung der Abhängigkeit von Bedingungen abhängig ist,
+deren Erfüllung nur durch Code in der abhängigen Klasse selbst erkannt werden kann,
+ist keine Dependency Injection möglich.
+
+In diesem Beispiel könnte beim if-clause eine Information nötig sein, die sich erst durch Erzeugung der Server Instanz durch den Parameter ergibt.
+
+c) Factories, Service Locators
+
+Man schafft sich aber eine sichere Abhängigkeit vom Client zur Factory / dem Service Locator.
+
+---------------------------------------------------------------------------------------------------------
+
+Aufgabe 10)

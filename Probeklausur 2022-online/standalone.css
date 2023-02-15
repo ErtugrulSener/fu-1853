@@ -1,0 +1,67 @@
+body{
+  background-color: white;
+  color: black;
+}
+
+#tbl_index {
+  width: 80%;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+#tbl_index td {
+  padding-bottom: 20px;
+}
+
+#tbl_index td > span {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+#tbl_index td li {
+  padding-bottom: 20px;
+}
+
+#tbl_results td {
+  padding-bottom: 10px;
+}
+
+td {
+  vertical-align: top;
+  padding: 0 10px 0 0;
+}
+
+td > pre {
+  margin: 0;
+  padding: 0;
+}
+
+pre, code {
+  font-size: 12pt;
+}
+
+#taskid{
+  float: right;
+  font-size: 10pt;
+}
+
+#btn_pagemode,
+#btn_exammode {
+  margin-left: 20px;
+  font-size: 16pt;
+}
+
+#btn_solve,
+#btn_prev {
+  margin-right: 20px;
+}
+
+#btn_prev,
+#btn_solve,
+#txt_true,
+#txt_false,
+#txt_none,
+#pnl_explanation {
+  display:none;
+}
+

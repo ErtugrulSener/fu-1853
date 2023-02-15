@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Klausur 1618</title>
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="standalone.js"></script>
+        <link type="text/css" rel="stylesheet" href="standalone.css">
+    </head>
+    <body>
+        <h1 align="center">Vorschau zur internen Kontrolle (Kurs 1853)</h1>
+        <table id="tbl_index">
+            <tr>
+                <td colspan="2">
+                    <h3>
+                        Hinweise zur Durchführung
+                    </h3>
+                    <ul>
+                        <li>Dieser Test umfasst insgesamt 15 Aufgaben.</li>
+                        <li>Jede richtig beantwortete Frage wird mit 1 Punkt bewertet; jede falsch oder nicht
+                            beantwortete Frage wird mit 0 Punkten bewertet.
+                        </li>
+                        <li>Die Klausur besteht aus Single- und Multiple-Choice-Aufgaben. Bei Single-Choice-Aufgaben
+                            können Sie nur eine Antwort auswählen (Radiobuttons); bei Multiple-Choice-Aufgaben können
+                            mehrere
+                            Antworten richtig sein (Checkboxen). Für Multiple-Choice-Aufgaben erhalten Sie genau dann
+                            einen Punkt,
+                            wenn Sie alle richtigen Antworten und keine weiteren Antworten ankreuzen.
+                        </li>
+                        <li>Die Prüfung gilt als bestanden, wenn mindestens 7 Aufgaben richtig
+                            beantwortet wurden.
+                        </li>
+                        <li>Alle Fragen beziehen sich auf JAVA als Programmiersprache.</li>
+                    </ul>
+                    <h3>
+                        Viel Erfolg!
+                    </h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr/>
+                    <h3>Starten der Klausurpreview</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="button" id="btn_pagemode" value="Einzelfragenmodus">
+                    </div>
+                    <p>
+                        Sie können Ihre Antworten bei jeder Frage durch Klick auf die Schaltfläche <code>Lösen</code>
+                        mit der Musterlösung vergleichen.
+                    </p>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input type="button" id="btn_exammode" value="OÜS-Klausurmodus">
+                    </div>
+                    <p>Ihre Ergebnisse werden gesammelt. Erst am Ende erhalten Sie eine Auswertung und die Möglichkeit,
+                        Musterlösungen einzusehen.</p>
+                </td>
+            </tr>
+        </table>
+        <script>
+          $(document).ready(function(){
+            $("#btn_pagemode,#btn_exammode").click(function(){
+              sessionStorage.clear();
+              sessionStorage.setItem('summary', this.id.replace('btn_', ''));
+              window.location.href='aufgabe01.html';
+            });
+          });
+        </script>
+    </body>
+</html>

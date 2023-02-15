@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html data-questionamount="15">
+    <head>
+        <title>Auswertung</title>
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="standalone.css">
+        <link type="text/css" rel="stylesheet" href="summary.css">
+    </head>
+    <body>
+        <h1>Auswertung</h1>
+        <div id="summerycol1"></div>
+        <div id="summerycol2"></div>
+        <div id="summerycol3"></div>
+        <div id="resultMsg"></div>
+        <input id="btn_restart" type="button" value="Test neu starten">
+        <script>
+          $(document).ready(function () {
+            $("#btn_restart").click(function () {
+              window.location.href = 'standalone.html';
+            });
+            let i;
+            let trueAnswers = 0;
+            let falseAnswers = 0;
+            let noneAnswers = 0;
+            let questionNo;
+            let questionAmount = $(document.documentElement).attr('data-questionamount');
+            let entriesPerColumn = questionAmount;
+            var mctArray = [];
+            let columnNo = 1;
+            if (questionAmount > 20) {
+              entriesPerColumn = Math.ceil(questionAmount / 3);
+            }
+            for (i = 0; i < sessionStorage.length; i++) {
+              questionNo = sessionStorage.key(i);
+              if (questionNo !== 'summary') {
+                mctArray[parseInt(questionNo) - 1] = JSON.parse(sessionStorage.getItem(questionNo));
+              }
+            }
+            for (i = 0; i < mctArray.length; i++) {
+              questionNo = i + 1;
+              var resultHtml = '';
+              if (mctArray[i] === null) {
+                resultHtml = "Fehler!";
+                break;
+              } else {
+                let mctResults = mctArray[i];
+                let isNoneAnswer = (mctResults[1].reduce(function (pv, cv) {
+                  return pv + cv;
+                }, 0) === 0);
+                let isTrueAnswer = (!isNoneAnswer && JSON.stringify(mctResults[0]) === JSON.stringify(mctResults[1]));
+                if (isNoneAnswer) {
+                  resultHtml = "Keine Antwort";
+                  noneAnswers++;
+                } else if (isTrueAnswer) {
+                  resultHtml = "<span style=\"color:#00C000\">Richtig</span>";
+                  trueAnswers++;
+                } else {
+                  resultHtml = "<span style=\"color:#F00000\">Falsch</span>";
+                  falseAnswers++;
+                }
+              }
+              var fileName = "aufgabe" + String(questionNo).padStart(2, '0') + ".html";
+              var fileTitle = "Aufgabe " + questionNo;
+              $('#summerycol' + columnNo).append(`<div><p><a title="${fileTitle}" href="${fileName}">${fileTitle}</a>: ${resultHtml}</p></div>`);
+              if (questionNo % entriesPerColumn === 0) {
+                columnNo++;
+              }
+            }
+
+            let truePercentage = parseFloat(trueAnswers / mctArray.length * 100).toFixed(1) + "%";
+            let falsePercentage = parseFloat(falseAnswers / mctArray.length * 100).toFixed(1) + "%";
+            let resultMsg = `Sie haben von insgesamt ${mctArray.length} Aufgaben ${trueAnswers} <span style=\"color:#00C000\">richtig</span> (=${truePercentage}) und ${falseAnswers} <span style=\"color:#F00000\">falsch</span> (=${falsePercentage}) gelöst.`;
+            if (noneAnswers > 0) {
+              let nonePercentage = parseFloat(noneAnswers / mctArray.length * 100).toFixed(1) + "%";
+              resultMsg += `<br\>Für ${noneAnswers} Aufgabe(n)  (=${nonePercentage}) wurden keine Lösung angegeben.`;
+            }
+            $('resultMsg').html(resultMsg);
+            sessionStorage.setItem('summary', '');
+          });
+        </script>
+    </body>
+</html>

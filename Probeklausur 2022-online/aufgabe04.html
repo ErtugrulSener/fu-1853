@@ -1,0 +1,81 @@
+<!DOCTYPE html><html data-questionno="4">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+          Aufgabe 4</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="jquery.min.js"></script><script type="text/javascript" src="standalone.js"></script>
+        <link type="text/css" rel="stylesheet" href="standalone.css">
+    </head>
+    <body>
+        <div id="taskid">
+            Id: DbC-01</div>
+        <h1>Aufgabe
+          4</h1>
+        <h3>
+    Design by Contract sollte man einsetzen 
+  </h3>
+        <form id="frm_solution">
+            <table id="tbl_results">
+                <tr>
+                    <td><input type="checkbox" name="answer" value="1"></td><td>in der Analysephase</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="answer" value="1"></td><td>in der Programmierung</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="answer" value="0"></td><td>als Refactoring-Werkzeug</td>
+                </tr>
+            </table>
+            <p>
+                <input id="btn_prev" type="button" value="Vorherige Aufgabe"><input id="btn_solve" type="submit" value="L&ouml;sen"><input id="btn_next" type="button" value="N&auml;chste Aufgabe">
+            </p>
+        </form>
+        <div id="pnl_solution">
+            <div>
+                <h4 id="txt_true">Ihre L&ouml;sung ist richtig!</h4>
+                <h4 id="txt_false">Ihre L&ouml;sung ist leider nicht richtig.</h4>
+                <h4 id="txt_none">Sie haben keine L&ouml;sung angegeben.</h4>
+            </div>
+            <div id="pnl_explanation">
+                <p></p>
+            </div>
+        </div>
+        <script>
+          $(document).ready(function(){
+            const questionAmount = 15;
+            const questionNo = parseInt($(document.documentElement).attr('data-questionno'));
+            const mode = (sessionStorage.getItem('summary') === null ? '' : sessionStorage.getItem('summary'));
+            getResult(questionNo);
+            $('#frm_solution').submit(function(event) {
+              solve(mode);
+              event.preventDefault();
+            });
+            
+            $("#btn_prev").click(function(){
+              setResult();
+              window.location.href='aufgabe03.html';
+            });
+            
+            $('#btn_prev').toggle((questionNo > 1 && mode !== ''));
+            $('#btn_solve').toggle((mode === 'pagemode'));
+            if(mode === '' || questionNo === questionAmount) {
+              $('#btn_next').prop("value", "Zur Auswertung");
+            } else {
+              $('#btn_next').prop("value", "N\u00E4chste Aufgabe");
+            }
+            if(mode === '') {
+              solve(mode);
+              $('#btn_next').click(function () {
+                window.location.href = 'summary.html';
+              });
+            } else {
+              $('#btn_next').click(function () {
+                setResult(questionNo);
+                window.location.href = 'aufgabe05.html';
+              });
+            }
+          });
+        </script>
+    </body>
+</html>
